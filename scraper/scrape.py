@@ -1,7 +1,7 @@
 """
 Card Rush PSA scraper
 Scrapes all pages of https://www.cardrush-op.jp/product-group/37/
-Outputs: public/cards.json
+Outputs: docs/cards.json
 """
 
 import re
@@ -146,8 +146,8 @@ def main():
         "cards": cards,
     }
 
-    os.makedirs("public", exist_ok=True)
-    with open("public/cards.json", "w", encoding="utf-8") as f:
+    os.makedirs("docs", exist_ok=True)
+    with open("docs/cards.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(f"\nDone. {len(cards)} cards written to public/cards.json")
