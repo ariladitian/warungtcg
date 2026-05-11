@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-11T03:32:23Z",
-  "total": 90,
+  "updated_at": "2026-05-11T04:57:06Z",
+  "total": 89,
   "cards": [
     {
       "id": "13130",
@@ -105,7 +105,7 @@
       "rarity": "P",
       "set": "P-055",
       "price_jpy": 87800,
-      "stock": 9,
+      "stock": 7,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/12474",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260308_4ead73.jpg"
@@ -661,18 +661,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/3492",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240229_f9cf6f.jpg"
-    },
-    {
-      "id": "3486",
-      "name": "ヴィオラ(パラレル/illust:NIJIMAARC)",
-      "grade": "PSA10",
-      "rarity": "SR/P",
-      "set": "EB01-052",
-      "price_jpy": 9980,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/3486",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/K9240228004.jpg"
     },
     {
       "id": "3224",
