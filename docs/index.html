@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>One Piece PSA Cards — Jastip Japan</title>
-  <meta name="description" content="Jastip kartu One Piece TCG PSA graded langsung dari Jepang. Harga IDR, order via WhatsApp." />
+  <title>Warung TCG PSA Vault — One Piece</title>
+  <meta name="description" content="Kartu One Piece TCG PSA graded langsung dari Jepang. Harga IDR, order via WhatsApp." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
@@ -66,7 +66,6 @@
     .set-code { font-size: 11px; color: var(--text-3); font-family: monospace; }
     .card-prices { display: flex; flex-direction: column; gap: 2px; }
     .price-main { font-size: 20px; font-weight: 600; color: var(--text); line-height: 1; }
-    .price-source { font-size: 12px; color: var(--text-3); margin-top: 2px; }
     .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 10px; margin-top: auto; }
     .stock-label { font-size: 12px; color: var(--text-2); display: flex; align-items: center; gap: 5px; }
     .stock-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
@@ -93,8 +92,8 @@
     <a class="site-logo" href="#">
       <div class="logo-icon">OP</div>
       <div>
-        <div class="logo-text">One Piece PSA Cards</div>
-        <div class="logo-sub">Jastip langsung dari Jepang</div>
+        <div class="logo-text">Warung TCG PSA Vault</div>
+        <div class="logo-sub">Kartu One Piece TCG langsung dari Jepang</div>
       </div>
     </a>
     <span class="header-badge">✦ PSA Graded Only</span>
@@ -132,11 +131,11 @@
   <div class="pagination" id="pagination"></div>
 </main>
 <footer class="site-footer">
-  Harga dalam IDR sudah termasuk jasa pengiriman dari Jepang. Sumber: <a href="https://www.cardrush-op.jp/product-group/37/" target="_blank" rel="noopener" style="color:inherit">cardrush-op.jp</a>
+  © Warung TCG PSA Vault — Jastip kartu PSA graded dari Jepang
 </footer>
 <script>
 const WA_NUMBER = "6281281078994";
-const MARKUP    = 1.30;
+const MARKUP    = 1.15;
 const PER_PAGE  = 24;
 let allCards = [], filtered = [], page = 1, jpyToIdr = 107;
 const fmt    = n => Math.ceil(n / 1000) * 1000;
@@ -199,7 +198,6 @@ function render() {
       </div>
       <div class="card-prices">
         <div class="price-main">${idr}</div>
-        <div class="price-source">Sumber: ${fmtJpy(c.price_jpy)} di Card Rush</div>
       </div>
       <div class="card-footer">
         <span class="stock-label"><span class="stock-dot ${low?"low":""}"></span>${c.stock} tersisa</span>
