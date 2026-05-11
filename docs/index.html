@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Warung TCG PSA Vault — One Piece</title>
+  <title>Warung TCG PSA Vault — Jastip Japan</title>
   <meta name="description" content="Kartu One Piece TCG PSA graded langsung dari Jepang. Harga IDR, order via WhatsApp." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -93,7 +93,7 @@
       <div class="logo-icon">OP</div>
       <div>
         <div class="logo-text">Warung TCG PSA Vault</div>
-        <div class="logo-sub">Kartu One Piece TCG langsung dari Jepang</div>
+        <div class="logo-sub">Jastip langsung dari Jepang</div>
       </div>
     </a>
     <span class="header-badge">✦ PSA Graded Only</span>
@@ -104,7 +104,7 @@
     <div class="stat-card"><div class="stat-label">Total listing</div><div class="stat-val" id="stat-total">—</div><div class="stat-sub">kartu tersedia</div></div>
     <div class="stat-card"><div class="stat-label">PSA 10</div><div class="stat-val" id="stat-psa10">—</div><div class="stat-sub">gem mint</div></div>
     <div class="stat-card"><div class="stat-label">Kurs hari ini</div><div class="stat-val" id="stat-rate">—</div><div class="stat-sub">¥1 → IDR</div></div>
-    <div class="stat-card"><div class="stat-label">Update terakhir</div><div class="stat-val" id="stat-updated" style="font-size:15px;padding-top:4px">—</div><div class="stat-sub">data Card Rush</div></div>
+    <div class="stat-card"><div class="stat-label">Update terakhir</div><div class="stat-val" id="stat-updated" style="font-size:15px;padding-top:4px">—</div><div class="stat-sub">auto update</div></div>
   </div>
   <div class="controls">
     <div class="search-wrap">
@@ -126,7 +126,7 @@
   </div>
   <div id="updated-bar" class="updated-bar"></div>
   <div class="card-grid" id="grid">
-    <div class="loading-state"><div class="spinner"></div><div>Memuat listing dari Card Rush…</div></div>
+    <div class="loading-state"><div class="spinner"></div><div>Memuat listing…</div></div>
   </div>
   <div class="pagination" id="pagination"></div>
 </main>
@@ -140,7 +140,6 @@ const PER_PAGE  = 24;
 let allCards = [], filtered = [], page = 1, jpyToIdr = 107;
 const fmt    = n => Math.ceil(n / 1000) * 1000;
 const fmtIdr = jpy => "Rp " + fmt(jpy * jpyToIdr * MARKUP).toLocaleString("id-ID");
-const fmtJpy = n   => "¥" + n.toLocaleString("ja-JP");
 function gradeClass(g) { return g==="PSA10"?"b-psa10":g==="PSA9"?"b-psa9":g==="PSA8"?"b-psa8":"b-psa"; }
 function rarityClass(r) {
   const base = r.replace(/\/P$/,"").replace("SP","").trim();
@@ -153,7 +152,7 @@ function rarityClass(r) {
   return "b-c";
 }
 function waMsg(c) {
-  return `Halo Kak! Saya mau order kartu berikut:\n\n🃏 *${c.name}*\n📊 Grade: *${c.grade}*\n✨ Rarity: ${c.rarity}  |  Set: ${c.set}\n💰 Harga: *${fmtIdr(c.price_jpy)}*\n🔗 ${c.url}\n\nMohon konfirmasi ketersediaan. Terima kasih! 🙏`;
+  return `Halo Kak! Saya mau order kartu berikut:\n\n🃏 *${c.name}*\n📊 Grade: *${c.grade}*\n✨ Rarity: ${c.rarity}  |  Set: ${c.set}\n💰 Harga: *${fmtIdr(c.price_jpy)}*\n\nMohon konfirmasi ketersediaan. Terima kasih! 🙏`;
 }
 async function fetchRate() {
   try {
@@ -196,9 +195,7 @@ function render() {
           ${c.set?`<span class="set-code">${c.set}</span>`:""}
         </div>
       </div>
-      <div class="card-prices">
-        <div class="price-main">${idr}</div>
-      </div>
+      <div class="card-prices"><div class="price-main">${idr}</div></div>
       <div class="card-footer">
         <span class="stock-label"><span class="stock-dot ${low?"low":""}"></span>${c.stock} tersisa</span>
         <a class="wa-btn" href="https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMsg(c))}" target="_blank" rel="noopener">
