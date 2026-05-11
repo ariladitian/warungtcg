@@ -31,39 +31,32 @@ HEADERS = {
     ),
     "Accept-Language": "ja,en;q=0.9",
 }
-LIST_DELAY    = 1.5   # seconds between listing-page requests
-PRODUCT_DELAY = 1.2   # seconds between product-page requests (be polite)
-MAX_NEW_IMAGES_PER_RUN = 200  # safety cap — never fetch more than this per day
+LIST_DELAY    = 1.5
+PRODUCT_DELAY = 1.2
+MAX_NEW_IMAGES_PER_RUN = 200
 
-
-# ── parsers ───────────────────────────────────────────────────────────────────
-
-def parse_grade(raw: str) -> str:
+def parse_grade(raw):
     m = re.search(r"〔(?:※状態難/)?(\w+\d+)鑑定済〕", raw)
     return m.group(1) if m else "PSA"
 
-def parse_name(raw: str) -> str:
+def parse_name(raw):
     m = re.search(r"〕(.+?)【", raw)
     return m.group(1).strip() if m else raw
 
-def parse_rarity(raw: str) -> str:
+def parse_rarity(raw):
     m = re.search(r"【(.+?)】", raw)
     return m.group(1) if m else ""
 
-def parse_set(raw: str) -> str:
+def parse_set(raw):
     m = re.search(r"\{(.+?)\}", raw)
     return m.group(1) if m else ""
 
-def is_damaged(raw: str) -> bool:
+def is_damaged(raw):
     return "状態難" in raw
 
-
-# ── image cache: load previous cards.json ────────────────────────────────────
-
-def load_image_cache() -> dict[str, str]:
-    """Return {product_id: image_url} from the last saved cards.json."""
+def load_image_cache():
     if not os.path.exists(CARDS_JSON):
-        print("  No existing cards.json — starting fresh (all images will be fetched).")
+        print("  No existing cards.json — starting fresh.")
         return {}
     try:
         with open(CARDS_JSON, encoding="utf-8") as f:
@@ -75,18 +68,14 @@ def load_image_cache() -> dict[str, str]:
         print(f"  Could not load cache: {e}")
         return {}
 
-
-# ── phase 1: scrape listing pages ────────────────────────────────────────────
-
-def scrape_listings() -> list[dict]:
+def scrape_listings():
     print("\n=== Phase 1: scraping listing pages ===")
-
     resp = requests.get(f"{BASE_URL}?page=1&display=100", headers=HEADERS, timeout=30)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "lxml")
 
     count_el = soup.find(string=re.compile(r"\d+件"))
-    total_items = 1625  # fallback
+    total_items = 1625
     if count_el:
         m = re.search(r"([\d,]+)件", count_el)
         if m:
@@ -94,8 +83,7 @@ def scrape_listings() -> list[dict]:
     pages_to_fetch = max(1, -(-total_items // 100))
     print(f"Total items: {total_items} → {pages_to_fetch} pages")
 
-    all_cards = []
-    seen_ids  = set()
+    all_cards, seen_ids = [], set()
 
     for page in range(1, pages_to_fetch + 1):
         url = f"{BASE_URL}?page={page}&display=100"
@@ -129,6 +117,10 @@ def scrape_listings() -> list[dict]:
                 continue
             price = int(price_m.group(1).replace(",", ""))
 
+            # skip sold-out cards entirely
+            if "在庫なし" in raw_text:
+                continue
+
             stock_m = re.search(r"在庫数\s*(\d+)枚", raw_text)
             stock   = int(stock_m.group(1)) if stock_m else 1
 
@@ -144,117 +136,78 @@ def scrape_listings() -> list[dict]:
                 "stock":     stock,
                 "damaged":   is_damaged(raw_text),
                 "url":       PRODUCT_URL.format(product_id),
-                "image":     "",   # filled in phase 2
+                "image":     "",
             })
 
         print(f"{found} cards (total: {len(all_cards)})")
 
     return all_cards
 
-
-# ── phase 2: incremental image fetch ─────────────────────────────────────────
-
-def fetch_image(product_id: str) -> str:
-    """Fetch the main image URL from a single product page."""
+def fetch_image(product_id):
     url = PRODUCT_URL.format(product_id)
     try:
         resp = requests.get(url, headers=HEADERS, timeout=20)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "lxml")
 
-        # og:image is the most reliable signal
         og = soup.find("meta", property="og:image")
         if og and og.get("content"):
             return og["content"]
 
-        # fallback: known Card Rush image selectors
-        for selector in ["img.goods_img", ".product_img img",
-                         ".item_img img", "#goods_img img", ".itemphoto img"]:
+        for selector in ["img.goods_img", ".product_img img", ".item_img img", "#goods_img img", ".itemphoto img"]:
             el = soup.select_one(selector)
             if el and el.get("src"):
                 src = el["src"]
-                if src.startswith("//"):   src = "https:" + src
+                if src.startswith("//"): src = "https:" + src
                 elif src.startswith("/"): src = "https://www.cardrush-op.jp" + src
                 return src
 
-        # last resort: any img whose URL contains /image/ or /img/
         for img in soup.find_all("img"):
             src = img.get("src") or img.get("data-src") or ""
             if "/image/" in src or "/img/" in src:
-                if src.startswith("//"):   src = "https:" + src
+                if src.startswith("//"): src = "https:" + src
                 elif src.startswith("/"): src = "https://www.cardrush-op.jp" + src
                 if src.startswith("http"):
                     return src
-
     except Exception as e:
         print(f"    ✗ {product_id}: {e}")
-
     return ""
 
-
-def enrich_incrementally(cards: list[dict], cache: dict[str, str]) -> list[dict]:
-    """
-    For each card:
-      - If the ID exists in cache AND has a non-empty image → reuse it (0 requests)
-      - Otherwise → fetch the product page (new card or previously failed)
-    Caps at MAX_NEW_IMAGES_PER_RUN fetches per run.
-    """
+def enrich_incrementally(cards, cache):
     print("\n=== Phase 2: incremental image fetch ===")
-
-    # Identify which cards need a fetch
     needs_fetch = [c for c in cards if not cache.get(c["id"])]
     has_cache   = [c for c in cards if cache.get(c["id"])]
-
     print(f"  Reusing cached images : {len(has_cache)}")
     print(f"  Need image fetch      : {len(needs_fetch)}")
 
-    # Apply safety cap
     if len(needs_fetch) > MAX_NEW_IMAGES_PER_RUN:
-        print(f"  ⚠ Capping at {MAX_NEW_IMAGES_PER_RUN} fetches this run "
-              f"(remaining {len(needs_fetch) - MAX_NEW_IMAGES_PER_RUN} will be picked up tomorrow)")
+        print(f"  ⚠ Capping at {MAX_NEW_IMAGES_PER_RUN} fetches this run")
         needs_fetch = needs_fetch[:MAX_NEW_IMAGES_PER_RUN]
 
-    est_mins = len(needs_fetch) * PRODUCT_DELAY / 60
-    print(f"  Estimated fetch time  : ~{est_mins:.1f} min\n")
+    print(f"  Estimated fetch time  : ~{len(needs_fetch) * PRODUCT_DELAY / 60:.1f} min\n")
 
-    # Apply cache to all cards first
     for card in cards:
         card["image"] = cache.get(card["id"], "")
 
-    # Fetch only the ones that need it
-    fetched = 0
     for i, card in enumerate(needs_fetch, 1):
         print(f"  [{i}/{len(needs_fetch)}] {card['id']}  {card['name'][:40]} …", end=" ", flush=True)
         img = fetch_image(card["id"])
         card["image"] = img
         print("✓" if img else "—")
-        fetched += 1
         time.sleep(PRODUCT_DELAY)
 
-    # Summary
     total_with_images = sum(1 for c in cards if c["image"])
-    print(f"\n  Fetched this run : {fetched}")
+    print(f"\n  Fetched this run : {len(needs_fetch)}")
     print(f"  Total with images: {total_with_images}/{len(cards)}")
-
     return cards
-
-
-# ── main ──────────────────────────────────────────────────────────────────────
 
 def main():
     print("=== Card Rush PSA Scraper (incremental) ===")
-
-    # Load previous image cache before scraping
     print("\nLoading image cache …")
     cache = load_image_cache()
-
-    # Phase 1: always scrape all listing pages for fresh prices/stock
     cards = scrape_listings()
-
-    # Phase 2: only fetch images for new / missing cards
     cards = enrich_incrementally(cards, cache)
 
-    # Write output
     output = {
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "total":      len(cards),
@@ -266,7 +219,6 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(f"\n✅ Done. {len(cards)} cards written to {CARDS_JSON}")
-
 
 if __name__ == "__main__":
     main()
