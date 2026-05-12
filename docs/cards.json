@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-11T14:14:02Z",
+  "updated_at": "2026-05-12T04:34:29Z",
   "total": 90,
   "cards": [
     {
@@ -99,6 +99,18 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260308_f67a8f.jpg"
     },
     {
+      "id": "11592",
+      "name": "ボア・ハンコック(パラレル/SP/和柄/illust:otton)",
+      "grade": "PSA10",
+      "rarity": "SP",
+      "set": "OP14-112",
+      "price_jpy": 94800,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/11592",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260120_0eba51.jpg"
+    },
+    {
       "id": "11589",
       "name": "ヴィンスモーク・レイジュ(パラレル/SP/タロット柄)",
       "grade": "PSA10",
@@ -157,6 +169,18 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/10418",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20251005_52a8ed.jpg"
+    },
+    {
+      "id": "8295",
+      "name": "マーシャル・D・ティーチ(パラレル/漫画背景/漫画絵)",
+      "grade": "PSA9",
+      "rarity": "SR/SP",
+      "set": "OP09-093",
+      "price_jpy": 84800,
+      "stock": 1,
+      "damaged": true,
+      "url": "https://www.cardrush-op.jp/product/8295",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20250526_df9d63.jpg"
     },
     {
       "id": "7929",
@@ -807,18 +831,6 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231213_657a7c.jpg"
     },
     {
-      "id": "2666",
-      "name": "ヤマト(illust:Takashi Kojima)",
-      "grade": "PSA10",
-      "rarity": "C",
-      "set": "ST09-012",
-      "price_jpy": 9980,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/2666",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/OPPSA1211_5.jpg"
-    },
-    {
       "id": "2588",
       "name": "錦えもん(パラレル/漫画絵)",
       "grade": "PSA10",
@@ -889,18 +901,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/2433",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231119_e294ba.jpg"
-    },
-    {
-      "id": "2426",
-      "name": "モンキー・D・ルフィ",
-      "grade": "PSA10",
-      "rarity": "P",
-      "set": "P-033",
-      "price_jpy": 52800,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/2426",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231119_26431d.jpg"
     },
     {
       "id": "2416",
