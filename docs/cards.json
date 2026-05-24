@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-23T04:38:03Z",
-  "total": 130,
+  "updated_at": "2026-05-24T05:00:41Z",
+  "total": 144,
   "cards": [
     {
       "id": "13229",
@@ -25,18 +25,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/13227",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260521_08eb79.jpg"
-    },
-    {
-      "id": "13226",
-      "name": "ニコ・ロビン(パラレル/illust:BISAI)",
-      "grade": "PSA10",
-      "rarity": "R/P",
-      "set": "OP09-107",
-      "price_jpy": 9980,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/13226",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260521_281591.jpg"
     },
     {
       "id": "13225",
@@ -165,7 +153,7 @@
       "rarity": "SEC/P",
       "set": "OP13-118",
       "price_jpy": 72800,
-      "stock": 4,
+      "stock": 5,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/12961",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260419_214283.jpg"
@@ -181,18 +169,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/12959",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260419_a65378.jpg"
-    },
-    {
-      "id": "12953",
-      "name": "モンキー・D・ルフィ(パラレル/SP/悪魔の実模様)",
-      "grade": "PSA10",
-      "rarity": "SP",
-      "set": "ST26-005[OP15]",
-      "price_jpy": 128000,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/12953",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260419_1d9ad4.jpg"
     },
     {
       "id": "12952",
@@ -217,6 +193,18 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/12936",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260418_8e7ccb.jpg"
+    },
+    {
+      "id": "12834",
+      "name": "エネル(パラレル/漫画背景/漫画絵)",
+      "grade": "PSA10",
+      "rarity": "SEC/SP",
+      "set": "OP15-118",
+      "price_jpy": 268000,
+      "stock": 2,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/12834",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260409_82c78b.jpg"
     },
     {
       "id": "12752",
@@ -255,13 +243,25 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260308_4ead73.jpg"
     },
     {
+      "id": "12264",
+      "name": "キッド&キラー(パラレル/SP/和柄/illust:Katsuo Tadano)",
+      "grade": "PSA10",
+      "rarity": "SP",
+      "set": "EB01-003[OP14]",
+      "price_jpy": 25800,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/12264",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260225_43871a.jpg"
+    },
+    {
       "id": "12070",
       "name": "ロロノア・ゾロ(illust:AKIRA EGAWA)",
       "grade": "PSA10",
       "rarity": "SR",
       "set": "ST21-015",
       "price_jpy": 54800,
-      "stock": 3,
+      "stock": 2,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/12070",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260222_39b115.jpg"
@@ -297,7 +297,7 @@
       "rarity": "SEC",
       "set": "OP09-119",
       "price_jpy": 79800,
-      "stock": 2,
+      "stock": 1,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/11936",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260206_be00b4.jpg"
@@ -381,10 +381,22 @@
       "rarity": "SP",
       "set": "OP09-119[OP13]",
       "price_jpy": 72800,
-      "stock": 5,
+      "stock": 4,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/11585",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260120_98f9c6.jpg"
+    },
+    {
+      "id": "11575",
+      "name": "モンキー・D・ルフィ(ONE PIECE DAY/漫画絵)",
+      "grade": "PSA10",
+      "rarity": "P",
+      "set": "P-110",
+      "price_jpy": 42800,
+      "stock": 4,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/11575",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260120_40d9dd.jpg"
     },
     {
       "id": "11572",
@@ -505,6 +517,30 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/11221",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20251229_e29500.jpg"
+    },
+    {
+      "id": "11020",
+      "name": "ウタ(パラレル/漫画背景/漫画絵)",
+      "grade": "PSA10",
+      "rarity": "SEC/SP",
+      "set": "EB03-061",
+      "price_jpy": 198000,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/11020",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20251218_61bf92.jpg"
+    },
+    {
+      "id": "10817",
+      "name": "ドンキホーテ・ロシナンテ(コンパス背景)",
+      "grade": "PSA10",
+      "rarity": "R",
+      "set": "OP05-030",
+      "price_jpy": 14800,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/10817",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260203_efcd98.jpg"
     },
     {
       "id": "10421",
@@ -651,6 +687,18 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20250422_c687e7.jpg"
     },
     {
+      "id": "7904",
+      "name": "モンキー・D・ルフィ(パラレル/漫画背景/漫画絵)",
+      "grade": "PSA10",
+      "rarity": "SEC/SP",
+      "set": "EB02-061",
+      "price_jpy": 698000,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/7904",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20250414_36cd70.jpg"
+    },
+    {
       "id": "7843",
       "name": "モンキー・D・ルフィ(パラレル/漫画背景/漫画絵)",
       "grade": "PSA10",
@@ -721,6 +769,18 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/6509",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20241124_03cc58.jpg"
+    },
+    {
+      "id": "6367",
+      "name": "ウタ(パラレル/illust:otton)",
+      "grade": "PSA10",
+      "rarity": "R/P",
+      "set": "OP09-002",
+      "price_jpy": 9980,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/6367",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20241120_0dcb2b.jpg"
     },
     {
       "id": "6341",
@@ -825,7 +885,7 @@
       "rarity": "SEC/P",
       "set": "OP05-119[OP09]",
       "price_jpy": 92800,
-      "stock": 4,
+      "stock": 8,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/6142",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20241003_4b3ccc.jpg"
@@ -865,6 +925,18 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/6085",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260420_c2b004.jpg"
+    },
+    {
+      "id": "6067",
+      "name": "ヤマト(illust:SHINRA AGENCY Co.Ltd)",
+      "grade": "PSA10",
+      "rarity": "SR",
+      "set": "OP04-112",
+      "price_jpy": 25800,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/6067",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240922_b5d0bf.jpg"
     },
     {
       "id": "6004",
@@ -925,6 +997,18 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/4669",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240702_78cf39.jpg"
+    },
+    {
+      "id": "4658",
+      "name": "トニートニー・チョッパー(パラレル/illust:Rofta)",
+      "grade": "PSA10",
+      "rarity": "L/P",
+      "set": "OP08-001",
+      "price_jpy": 24800,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/4658",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240701_bd7cd1.jpg"
     },
     {
       "id": "4615",
@@ -997,6 +1081,18 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/3696",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/K9240312017.jpg"
+    },
+    {
+      "id": "2722",
+      "name": "モンキー・D・ルフィ(foil/TREASURECRUISE)",
+      "grade": "PSA10",
+      "rarity": "SR",
+      "set": "ST01-012",
+      "price_jpy": 41800,
+      "stock": 2,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/2722",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231219_1a42d0.jpg"
     },
     {
       "id": "3492",
@@ -1191,6 +1287,18 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231215_5faee7.jpg"
     },
     {
+      "id": "2689",
+      "name": "シャンクス(開封品/Japan/シリアル)",
+      "grade": "PSA10",
+      "rarity": "SEC",
+      "set": "OP01-120",
+      "price_jpy": 728000,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/2689",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231213_657a7c.jpg"
+    },
+    {
       "id": "2691",
       "name": "ユースタス・キッド(CS/illust:Studio Vigor Co.Ltd)",
       "grade": "PSA10",
@@ -1287,6 +1395,18 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231119_227436.jpg"
     },
     {
+      "id": "2430",
+      "name": "エネル(パラレル/illust:Yosuke Adachi)",
+      "grade": "PSA10",
+      "rarity": "SR/P",
+      "set": "OP05-100",
+      "price_jpy": 9980,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/2430",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231119_ef8970.jpg"
+    },
+    {
       "id": "2422",
       "name": "サカズキ(パラレル/漫画絵)",
       "grade": "PSA10",
@@ -1335,13 +1455,37 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231119_c128fc.jpg"
     },
     {
+      "id": "2414",
+      "name": "モンキー・D・ルフィ(パラレル/黒背景)",
+      "grade": "PSA10",
+      "rarity": "SR/P",
+      "set": "ST01-012",
+      "price_jpy": 42800,
+      "stock": 3,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/2414",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231119_2c6008.jpg"
+    },
+    {
+      "id": "2261",
+      "name": "レベッカ(パラレル/illust:Studio Vigor Co.Ltd)",
+      "grade": "PSA10",
+      "rarity": "L/P",
+      "set": "OP04-039",
+      "price_jpy": 21800,
+      "stock": 2,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/2261",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231112_11c22c.jpg"
+    },
+    {
       "id": "2256",
       "name": "トニートニー・チョッパー(角強化/illust:TAPIOCA)",
       "grade": "PSA10",
       "rarity": "C",
       "set": "ST01-006",
       "price_jpy": 99800,
-      "stock": 1,
+      "stock": 2,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/2256",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231111_70f38c.jpg"
@@ -1357,6 +1501,18 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/2249",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231108_f69307.jpg"
+    },
+    {
+      "id": "2228",
+      "name": "ポートガス・D・エース(パラレル/illust:Anderson)",
+      "grade": "PSA10",
+      "rarity": "L/P",
+      "set": "OP03-001",
+      "price_jpy": 24800,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/2228",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231105_c1085a.jpg"
     },
     {
       "id": "2222",
@@ -1441,6 +1597,18 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/9936",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20251002_e8fd9b.jpg"
+    },
+    {
+      "id": "9960",
+      "name": "シャンクス(パラレル/銀背景)",
+      "grade": "PSA10",
+      "rarity": "SP",
+      "set": "OP09-004[OP13]",
+      "price_jpy": 138000,
+      "stock": 2,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/9960",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20251006_94fc91.jpg"
     },
     {
       "id": "10042",
