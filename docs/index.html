@@ -38,10 +38,6 @@
     .ship-btn { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: var(--radius-sm); border: none; background: transparent; color: var(--text-2); cursor: pointer; transition: all 0.15s; white-space: nowrap; }
     .ship-btn.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
     .ship-btn:hover:not(.active) { color: var(--text); }
-    .nav-tabs { display: flex; gap: 4px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 3px; }
-    .nav-tab { font-size: 13px; font-weight: 500; padding: 5px 14px; border-radius: var(--radius-sm); text-decoration: none; color: var(--text-2); transition: all 0.15s; white-space: nowrap; }
-    .nav-tab.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
-    .nav-tab:hover:not(.active) { color: var(--text); }
     .au-banner { display: none; background: #f0f7ff; border: 1px solid #bdd6f5; border-radius: var(--radius); padding: 0.75rem 1.25rem; margin-bottom: 1.25rem; font-size: 13px; color: var(--blue); line-height: 1.5; }
     .au-banner.show { display: block; }
     .au-banner strong { font-weight: 600; }
@@ -103,7 +99,7 @@
     .pg:disabled { opacity: 0.35; cursor: default; }
     .updated-bar { text-align: right; font-size: 12px; color: var(--text-3); margin-bottom: 1rem; }
     .site-footer { text-align: center; padding: 2rem 1.5rem; font-size: 12px; color: var(--text-3); border-top: 1px solid var(--border); margin-top: 3rem; }
-    @media (max-width: 640px) { .main-wrap { padding: 1rem; } .card-grid { grid-template-columns: 1fr; } .stats-row { grid-template-columns: repeat(2, 1fr); } .nav-tab { font-size: 12px; padding: 5px 10px; } .ship-btn { font-size: 12px; padding: 5px 8px; } }
+    @media (max-width: 640px) { .main-wrap { padding: 1rem; } .card-grid { grid-template-columns: 1fr; } .stats-row { grid-template-columns: repeat(2, 1fr); } .ship-btn { font-size: 12px; padding: 5px 8px; } }
   </style>
 </head>
 <body>
@@ -131,7 +127,7 @@
     Payment via PayPal: <strong>paypal.me/warungtcg</strong>
   </div>
   <div class="stats-row">
-    <div class="stat-card"><div class="stat-label">Total listing</div><div class="stat-val" id="stat-total">—</div><div class="stat-sub">kartu tersedia</div></div>
+    <div class="stat-card"><div class="stat-label">Total listing</div><div class="stat-val" id="stat-total">—</div><div class="stat-sub" id="stat-total-sub">kartu tersedia</div></div>
     <div class="stat-card"><div class="stat-label">PSA 10</div><div class="stat-val" id="stat-psa10">—</div><div class="stat-sub">gem mint</div></div>
     <div class="stat-card"><div class="stat-label">Rate</div><div class="stat-val" id="stat-rate">—</div><div class="stat-sub" id="stat-rate-sub">¥1 → IDR</div></div>
     <div class="stat-card"><div class="stat-label">Update terakhir</div><div class="stat-val" id="stat-updated" style="font-size:15px;padding-top:4px">—</div><div class="stat-sub">auto update</div></div>
@@ -142,21 +138,21 @@
       <input class="search-input" type="text" id="search" placeholder="Cari dengan kode kartu: i.e OP01-120" oninput="applyFilters()" />
     </div>
     <select class="filter-select" id="grade-filter" onchange="applyFilters()">
-      <option value="">Semua grade</option>
+      <option value="" id="opt-all">Semua grade</option>
       <option value="PSA10">PSA 10</option>
       <option value="PSA9">PSA 9</option>
       <option value="PSA8">PSA 8</option>
     </select>
     <select class="filter-select" id="sort" onchange="applyFilters()">
-      <option value="default">Urutan default</option>
-      <option value="price-asc">Harga: rendah → tinggi</option>
-      <option value="price-desc">Harga: tinggi → rendah</option>
+      <option value="default" id="opt-default">Urutan default</option>
+      <option value="price-asc" id="opt-asc">Harga: rendah → tinggi</option>
+      <option value="price-desc" id="opt-desc">Harga: tinggi → rendah</option>
     </select>
     <span class="results-count" id="results-count"></span>
   </div>
   <div id="updated-bar" class="updated-bar"></div>
   <div class="card-grid" id="grid">
-    <div class="loading-state"><div class="spinner"></div><div>Memuat listing…</div></div>
+    <div class="loading-state"><div class="spinner"></div><div id="loading-text">Memuat listing…</div></div>
   </div>
   <div class="pagination" id="pagination"></div>
 </main>
@@ -179,6 +175,7 @@ async function fetchRates() {
     updateRateDisplay();
   } catch { updateRateDisplay(); }
 }
+
 function updateRateDisplay() {
   if (region === "ID") {
     document.getElementById("stat-rate").textContent = jpyToIdr.toLocaleString();
@@ -188,19 +185,32 @@ function updateRateDisplay() {
     document.getElementById("stat-rate-sub").textContent = "¥100 → AUD";
   }
 }
+
 function setRegion(r) {
   region = r;
-  document.getElementById("btn-id").classList.toggle("active", r === "ID");
-  document.getElementById("btn-au").classList.toggle("active", r === "AU");
-  document.getElementById("au-banner").classList.toggle("show", r === "AU");
-  document.getElementById("header-sub").textContent = r === "ID" ? "Kartu PSA OPTCG" : "Direct shipping from Japan to Australia";
+  const id = r === "ID";
+  document.getElementById("btn-id").classList.toggle("active", id);
+  document.getElementById("btn-au").classList.toggle("active", !id);
+  document.getElementById("au-banner").classList.toggle("show", !id);
+  document.getElementById("header-sub").textContent     = id ? "Kartu PSA OPTCG" : "Direct shipping from Japan to Australia";
+  document.getElementById("search").placeholder         = id ? "Cari dengan kode kartu: i.e OP01-120" : "Search by card name or code: e.g. OP01-120";
+  document.getElementById("opt-all").textContent        = id ? "Semua grade" : "All grades";
+  document.getElementById("opt-default").textContent    = id ? "Urutan default" : "Default order";
+  document.getElementById("opt-asc").textContent        = id ? "Harga: rendah → tinggi" : "Price: low → high";
+  document.getElementById("opt-desc").textContent       = id ? "Harga: tinggi → rendah" : "Price: high → low";
+  document.getElementById("stat-total-sub").textContent = id ? "kartu tersedia" : "cards available";
+  document.getElementById("results-count").textContent  = "";
+  const lt = document.getElementById("loading-text");
+  if (lt) lt.textContent = id ? "Memuat listing…" : "Loading listings…";
   updateRateDisplay();
   render();
 }
+
 const fmt    = n => Math.ceil(n / 1000) * 1000;
 const fmtIdr = jpy => "Rp " + fmt(jpy * jpyToIdr * MARKUP).toLocaleString("id-ID");
 const fmtAud = jpy => "A$" + (Math.ceil(jpy * jpyToAud * MARKUP * 2) / 2).toFixed(2);
 const fmtPrice = jpy => region === "ID" ? fmtIdr(jpy) : fmtAud(jpy);
+
 function gradeClass(g) { return g==="PSA10"?"b-psa10":g==="PSA9"?"b-psa9":g==="PSA8"?"b-psa8":"b-psa"; }
 function rarityClass(r) {
   const base = r.replace(/\/P$/,"").replace("SP","").trim();
@@ -212,6 +222,7 @@ function rarityClass(r) {
   if(base==="UC") return "b-uc";
   return "b-c";
 }
+
 function waMsgID(c) {
   return `Halo Kak! Saya mau order kartu berikut:\n\n🃏 *${c.name}*\n📊 Grade: *${c.grade}*\n✨ Rarity: ${c.rarity}  |  Set: ${c.set}\n💰 Harga: *${fmtIdr(c.price_jpy)}*\n\nMohon konfirmasi ketersediaan. Terima kasih! 🙏`;
 }
@@ -219,6 +230,7 @@ function waMsgAU(c) {
   return `Hi! I'd like to order the following card:\n\n🃏 *${c.name}*\n📊 Grade: *${c.grade}*\n✨ Rarity: ${c.rarity}  |  Set: ${c.set}\n💰 Price: *${fmtAud(c.price_jpy)}* (excl. shipping)\n📦 Ships direct from Japan via FedEx/DHL\n💳 Payment via PayPal: ${PAYPAL}\n\nPlease confirm availability and provide a shipping quote. Thank you!`;
 }
 function waMsg(c) { return region === "ID" ? waMsgID(c) : waMsgAU(c); }
+
 async function loadCards() {
   try {
     const d = await (await fetch("cards.json?t="+Date.now())).json();
@@ -229,21 +241,28 @@ async function loadCards() {
   } catch { allCards=[]; }
   applyFilters();
 }
+
 function applyFilters() {
   const q=document.getElementById("search").value.toLowerCase(), gf=document.getElementById("grade-filter").value, s=document.getElementById("sort").value;
   filtered=allCards.filter(c=>{ const t=(c.name+" "+c.set).toLowerCase(); return(!q||t.includes(q))&&(!gf||c.grade===gf); });
   if(s==="price-asc") filtered.sort((a,b)=>a.price_jpy-b.price_jpy);
   if(s==="price-desc") filtered.sort((a,b)=>b.price_jpy-a.price_jpy);
-  document.getElementById("results-count").textContent=filtered.length>0?filtered.length.toLocaleString()+" kartu":"";
+  const count = filtered.length;
+  document.getElementById("results-count").textContent = count > 0 ? count.toLocaleString() + (region==="ID" ? " kartu" : " cards") : "";
   page=1; render();
 }
+
 function render() {
   const grid=document.getElementById("grid"), pg=filtered.slice((page-1)*PER_PAGE,page*PER_PAGE);
-  if(!filtered.length){ grid.innerHTML='<div class="empty-state"><div style="font-size:32px;margin-bottom:8px">🔍</div><div>Tidak ada kartu yang cocok.</div></div>'; document.getElementById("pagination").innerHTML=""; return; }
+  if(!filtered.length){
+    grid.innerHTML=`<div class="empty-state"><div style="font-size:32px;margin-bottom:8px">🔍</div><div>${region==="ID"?"Tidak ada kartu yang cocok.":"No cards found."}</div></div>`;
+    document.getElementById("pagination").innerHTML=""; return;
+  }
   grid.innerHTML=pg.map(c=>{
     const price=fmtPrice(c.price_jpy), low=c.stock<=2;
     const imgHtml=c.image?`<img class="card-img" src="${c.image}" alt="${c.name}" loading="lazy" onerror="this.parentElement.innerHTML='<span class=card-img-placeholder>🃏</span>'">`:`<span class="card-img-placeholder">🃏</span>`;
     const priceNote=region==="AU"?`<div class="price-note">Excl. shipping · PayPal</div>`:"";
+    const stockText=region==="ID"?`${c.stock} tersisa`:`${c.stock} in stock`;
     return `<div class="card">
       <div class="card-img-wrap">${imgHtml}</div>
       <div class="card-top">
@@ -257,16 +276,17 @@ function render() {
       </div>
       <div class="card-prices"><div class="price-main">${price}</div>${priceNote}</div>
       <div class="card-footer">
-        <span class="stock-label"><span class="stock-dot ${low?"low":""}"></span>${c.stock} tersisa</span>
+        <span class="stock-label"><span class="stock-dot ${low?"low":""}"></span>${stockText}</span>
         <a class="wa-btn" href="https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMsg(c))}" target="_blank" rel="noopener">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.144.566 4.155 1.548 5.897L0 24l6.283-1.516A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 0 1-5.028-1.388l-.36-.214-3.732.9.94-3.628-.235-.373A9.77 9.77 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
-          Order via WA
+          ${region==="ID"?"Order via WA":"Order via WhatsApp"}
         </a>
       </div>
     </div>`;
   }).join("");
   renderPagination();
 }
+
 function renderPagination() {
   const total=Math.ceil(filtered.length/PER_PAGE), el=document.getElementById("pagination");
   if(total<=1){el.innerHTML="";return;}
