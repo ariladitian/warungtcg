@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Warung TCG PSA Vault</title>
-  <meta name="description" content="Kartu One Piece TCG PSA graded langsung dari Jepang. Harga IDR, order via WhatsApp." />
+  <title>Warung TCG PSA Vault — One Piece Graded Cards</title>
+  <meta name="description" content="PSA graded One Piece TCG cards. Jastip from Japan to Indonesia (IDR) and direct shipping to Australia (AUD)." />
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GVF5WV52QE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GVF5WV52QE');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GVF5WV52QE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GVF5WV52QE');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
@@ -29,12 +28,23 @@
     }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.5; min-height: 100vh; }
     .site-header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 1.5rem; position: sticky; top: 0; z-index: 100; }
-    .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 1rem; }
+    .header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; min-height: 60px; gap: 1rem; flex-wrap: wrap; padding: 8px 0; }
     .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .logo-icon { width: 34px; height: 34px; background: var(--accent); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px; font-weight: 600; }
     .logo-text { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.2; }
-    .logo-sub { font-size: 11px; color: var(--text-2); font-weight: 400; }
-    .header-badge { font-size: 12px; font-weight: 500; color: var(--green); background: var(--green-bg); padding: 4px 10px; border-radius: 99px; white-space: nowrap; }
+    .logo-sub { font-size: 11px; color: var(--text-2); font-weight: 400; transition: all 0.2s; }
+    .header-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .ship-selector { display: flex; gap: 3px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 3px; }
+    .ship-btn { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: var(--radius-sm); border: none; background: transparent; color: var(--text-2); cursor: pointer; transition: all 0.15s; white-space: nowrap; }
+    .ship-btn.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+    .ship-btn:hover:not(.active) { color: var(--text); }
+    .nav-tabs { display: flex; gap: 4px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 3px; }
+    .nav-tab { font-size: 13px; font-weight: 500; padding: 5px 14px; border-radius: var(--radius-sm); text-decoration: none; color: var(--text-2); transition: all 0.15s; white-space: nowrap; }
+    .nav-tab.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+    .nav-tab:hover:not(.active) { color: var(--text); }
+    .au-banner { display: none; background: #f0f7ff; border: 1px solid #bdd6f5; border-radius: var(--radius); padding: 0.75rem 1.25rem; margin-bottom: 1.25rem; font-size: 13px; color: var(--blue); line-height: 1.5; }
+    .au-banner.show { display: block; }
+    .au-banner strong { font-weight: 600; }
     .main-wrap { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
     .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 1.5rem; }
     .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.875rem 1rem; box-shadow: var(--shadow); }
@@ -75,6 +85,7 @@
     .set-code { font-size: 11px; color: var(--text-3); font-family: monospace; }
     .card-prices { display: flex; flex-direction: column; gap: 2px; }
     .price-main { font-size: 20px; font-weight: 600; color: var(--text); line-height: 1; }
+    .price-note { font-size: 11px; color: var(--text-3); margin-top: 2px; }
     .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 10px; margin-top: auto; }
     .stock-label { font-size: 12px; color: var(--text-2); display: flex; align-items: center; gap: 5px; }
     .stock-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
@@ -92,7 +103,7 @@
     .pg:disabled { opacity: 0.35; cursor: default; }
     .updated-bar { text-align: right; font-size: 12px; color: var(--text-3); margin-bottom: 1rem; }
     .site-footer { text-align: center; padding: 2rem 1.5rem; font-size: 12px; color: var(--text-3); border-top: 1px solid var(--border); margin-top: 3rem; }
-    @media (max-width: 520px) { .main-wrap { padding: 1rem; } .card-grid { grid-template-columns: 1fr; } .stats-row { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .main-wrap { padding: 1rem; } .card-grid { grid-template-columns: 1fr; } .stats-row { grid-template-columns: repeat(2, 1fr); } .nav-tab { font-size: 12px; padding: 5px 10px; } .ship-btn { font-size: 12px; padding: 5px 8px; } }
   </style>
 </head>
 <body>
@@ -102,17 +113,31 @@
       <div class="logo-icon">OP</div>
       <div>
         <div class="logo-text">Warung TCG Vault</div>
-        <div class="logo-sub">Kartu PSA OPTCG</div>
+        <div class="logo-sub" id="header-sub">Kartu PSA OPTCG</div>
       </div>
     </a>
-    <span class="header-badge">✦ PSA Graded Only</span>
+    <div class="header-right">
+      <div class="ship-selector">
+        <button class="ship-btn active" id="btn-id" onclick="setRegion('ID')">🇮🇩 IDR</button>
+        <button class="ship-btn" id="btn-au" onclick="setRegion('AU')">🇦🇺 AUD</button>
+      </div>
+      <nav class="nav-tabs">
+        <a class="nav-tab active" href="index.html">🏅 PSA Graded</a>
+        <a class="nav-tab" href="raw.html">🃏 Raw — Ready Stock</a>
+      </nav>
+    </div>
   </div>
 </header>
 <main class="main-wrap">
+  <div class="au-banner" id="au-banner">
+    <strong>🇦🇺 Shipping to Australia</strong> — Cards ship direct from Japan via FedEx/DHL.
+    Prices in AUD (excl. shipping). Shipping cost quoted separately after order.
+    Payment via PayPal: <strong>paypal.me/warungtcg</strong>
+  </div>
   <div class="stats-row">
     <div class="stat-card"><div class="stat-label">Total listing</div><div class="stat-val" id="stat-total">—</div><div class="stat-sub">kartu tersedia</div></div>
     <div class="stat-card"><div class="stat-label">PSA 10</div><div class="stat-val" id="stat-psa10">—</div><div class="stat-sub">gem mint</div></div>
-    <div class="stat-card"><div class="stat-label">Kurs hari ini</div><div class="stat-val" id="stat-rate">—</div><div class="stat-sub">¥1 → IDR</div></div>
+    <div class="stat-card"><div class="stat-label">Rate</div><div class="stat-val" id="stat-rate">—</div><div class="stat-sub" id="stat-rate-sub">¥1 → IDR</div></div>
     <div class="stat-card"><div class="stat-label">Update terakhir</div><div class="stat-val" id="stat-updated" style="font-size:15px;padding-top:4px">—</div><div class="stat-sub">auto update</div></div>
   </div>
   <div class="controls">
@@ -139,16 +164,47 @@
   </div>
   <div class="pagination" id="pagination"></div>
 </main>
-<footer class="site-footer">
-  © Warung TCG PSA Vault — Kartu PSA graded dari Jepang
-</footer>
+<footer class="site-footer">© Warung TCG PSA Vault — Kartu PSA graded dari Jepang</footer>
 <script>
 const WA_NUMBER = "6281293576933";
 const MARKUP    = 1.30;
+const RATE_BUF  = 1.04;
 const PER_PAGE  = 24;
-let allCards = [], filtered = [], page = 1, jpyToIdr = 107;
+const PAYPAL    = "https://paypal.me/warungtcg";
+let allCards = [], filtered = [], page = 1;
+let jpyToIdr = 107, jpyToAud = 0.010;
+let region = "ID";
+
+async function fetchRates() {
+  try {
+    const d = await (await fetch("https://api.exchangerate-api.com/v4/latest/JPY")).json();
+    if (d.rates?.IDR) jpyToIdr = Math.ceil(d.rates.IDR * RATE_BUF);
+    if (d.rates?.AUD) jpyToAud = d.rates.AUD * RATE_BUF;
+    updateRateDisplay();
+  } catch { updateRateDisplay(); }
+}
+function updateRateDisplay() {
+  if (region === "ID") {
+    document.getElementById("stat-rate").textContent = jpyToIdr.toLocaleString();
+    document.getElementById("stat-rate-sub").textContent = "¥1 → IDR";
+  } else {
+    document.getElementById("stat-rate").textContent = "A$" + (jpyToAud * 100).toFixed(2);
+    document.getElementById("stat-rate-sub").textContent = "¥100 → AUD";
+  }
+}
+function setRegion(r) {
+  region = r;
+  document.getElementById("btn-id").classList.toggle("active", r === "ID");
+  document.getElementById("btn-au").classList.toggle("active", r === "AU");
+  document.getElementById("au-banner").classList.toggle("show", r === "AU");
+  document.getElementById("header-sub").textContent = r === "ID" ? "Kartu PSA OPTCG" : "Direct shipping from Japan to Australia";
+  updateRateDisplay();
+  render();
+}
 const fmt    = n => Math.ceil(n / 1000) * 1000;
 const fmtIdr = jpy => "Rp " + fmt(jpy * jpyToIdr * MARKUP).toLocaleString("id-ID");
+const fmtAud = jpy => "A$" + (Math.ceil(jpy * jpyToAud * MARKUP * 2) / 2).toFixed(2);
+const fmtPrice = jpy => region === "ID" ? fmtIdr(jpy) : fmtAud(jpy);
 function gradeClass(g) { return g==="PSA10"?"b-psa10":g==="PSA9"?"b-psa9":g==="PSA8"?"b-psa8":"b-psa"; }
 function rarityClass(r) {
   const base = r.replace(/\/P$/,"").replace("SP","").trim();
@@ -160,19 +216,13 @@ function rarityClass(r) {
   if(base==="UC") return "b-uc";
   return "b-c";
 }
-function waMsg(c) {
+function waMsgID(c) {
   return `Halo Kak! Saya mau order kartu berikut:\n\n🃏 *${c.name}*\n📊 Grade: *${c.grade}*\n✨ Rarity: ${c.rarity}  |  Set: ${c.set}\n💰 Harga: *${fmtIdr(c.price_jpy)}*\n\nMohon konfirmasi ketersediaan. Terima kasih! 🙏`;
 }
-async function fetchRate() {
-  try {
-    const r = await fetch("https://api.exchangerate-api.com/v4/latest/JPY");
-    const d = await r.json();
-    if (d.rates?.IDR) {
-      jpyToIdr = Math.ceil(d.rates.IDR * 1.04);
-      document.getElementById("stat-rate").textContent = jpyToIdr.toLocaleString();
-    }
-  } catch { document.getElementById("stat-rate").textContent = "~107"; }
+function waMsgAU(c) {
+  return `Hi! I'd like to order the following card:\n\n🃏 *${c.name}*\n📊 Grade: *${c.grade}*\n✨ Rarity: ${c.rarity}  |  Set: ${c.set}\n💰 Price: *${fmtAud(c.price_jpy)}* (excl. shipping)\n📦 Ships direct from Japan via FedEx/DHL\n💳 Payment via PayPal: ${PAYPAL}\n\nPlease confirm availability and provide a shipping quote. Thank you!`;
 }
+function waMsg(c) { return region === "ID" ? waMsgID(c) : waMsgAU(c); }
 async function loadCards() {
   try {
     const d = await (await fetch("cards.json?t="+Date.now())).json();
@@ -195,8 +245,9 @@ function render() {
   const grid=document.getElementById("grid"), pg=filtered.slice((page-1)*PER_PAGE,page*PER_PAGE);
   if(!filtered.length){ grid.innerHTML='<div class="empty-state"><div style="font-size:32px;margin-bottom:8px">🔍</div><div>Tidak ada kartu yang cocok.</div></div>'; document.getElementById("pagination").innerHTML=""; return; }
   grid.innerHTML=pg.map(c=>{
-    const idr=fmtIdr(c.price_jpy), low=c.stock<=2;
+    const price=fmtPrice(c.price_jpy), low=c.stock<=2;
     const imgHtml=c.image?`<img class="card-img" src="${c.image}" alt="${c.name}" loading="lazy" onerror="this.parentElement.innerHTML='<span class=card-img-placeholder>🃏</span>'">`:`<span class="card-img-placeholder">🃏</span>`;
+    const priceNote=region==="AU"?`<div class="price-note">Excl. shipping · PayPal</div>`:"";
     return `<div class="card">
       <div class="card-img-wrap">${imgHtml}</div>
       <div class="card-top">
@@ -208,7 +259,7 @@ function render() {
           ${c.set?`<span class="set-code">${c.set}</span>`:""}
         </div>
       </div>
-      <div class="card-prices"><div class="price-main">${idr}</div></div>
+      <div class="card-prices"><div class="price-main">${price}</div>${priceNote}</div>
       <div class="card-footer">
         <span class="stock-label"><span class="stock-dot ${low?"low":""}"></span>${c.stock} tersisa</span>
         <a class="wa-btn" href="https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMsg(c))}" target="_blank" rel="noopener">
@@ -232,7 +283,7 @@ function renderPagination() {
   el.innerHTML=html;
 }
 function goPage(p){ page=p; render(); window.scrollTo({top:0,behavior:"smooth"}); }
-Promise.all([fetchRate(), loadCards()]);
+Promise.all([fetchRates(), loadCards()]);
 </script>
 </body>
 </html>
