@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-28T06:16:57Z",
-  "total": 285,
+  "updated_at": "2026-09-29T06:32:51Z",
+  "total": 279,
   "cards": [
     {
       "id": "15403",
@@ -687,18 +687,6 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20241130_bba909.jpg"
     },
     {
-      "id": "8663",
-      "name": "しらほし(パラレル/illust:Naruse Uroko)",
-      "grade": "PSA10",
-      "rarity": "L/P",
-      "set": "OP11-022",
-      "price_jpy": 9980,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/8663",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20250705_961db2.jpg"
-    },
-    {
       "id": "8558",
       "name": "シャーロット・ペロスペロー(パラレル/illust:BISAI)",
       "grade": "PSA10",
@@ -879,18 +867,6 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20241120_0dcb2b.jpg"
     },
     {
-      "id": "6341",
-      "name": "ウタ(illust:Sunohara)",
-      "grade": "PSA10",
-      "rarity": "R",
-      "set": "OP09-002",
-      "price_jpy": 138000,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/6341",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20241115_d81b1c.jpg"
-    },
-    {
       "id": "6304",
       "name": "ヤマト(パラレル/和柄/illust:S-KINOKO)",
       "grade": "PSA10",
@@ -1029,7 +1005,7 @@
       "rarity": "SR/P",
       "set": "OP08-106",
       "price_jpy": 10800,
-      "stock": 2,
+      "stock": 1,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/4687",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240706_851cd2.jpg"
@@ -1515,18 +1491,6 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240213_8b9aa2.jpg"
     },
     {
-      "id": "3170",
-      "name": "トニートニー・チョッパー(パラレル/漫画背景/漫画絵)",
-      "grade": "PSA10",
-      "rarity": "SR/SP",
-      "set": "EB01-006",
-      "price_jpy": 298000,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/3170",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240210_780dd2.jpg"
-    },
-    {
       "id": "3167",
       "name": "ペローナ(パラレル/illust:Koushi Rokushiro)",
       "grade": "PSA10",
@@ -1755,18 +1719,6 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/OPPSA1211_28.jpg"
     },
     {
-      "id": "2685",
-      "name": "お玉(illust:sowsow)",
-      "grade": "PSA10",
-      "rarity": "UC",
-      "set": "OP01-006",
-      "price_jpy": 11800,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/2685",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/OPPSA1211_41.jpg"
-    },
-    {
       "id": "2664",
       "name": "ナミ(パラレル/illust:Sunohara/青背景/ウィンク)",
       "grade": "PSA10",
@@ -1777,18 +1729,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/2664",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231210_169057.jpg"
-    },
-    {
-      "id": "2596",
-      "name": "ウタ(illust:Makitoshi)",
-      "grade": "PSA10",
-      "rarity": "P",
-      "set": "P-031",
-      "price_jpy": 12800,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/2596",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231204_a65f9c.jpg"
     },
     {
       "id": "2595",
@@ -2355,18 +2295,6 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260828_f43f19.jpg"
     },
     {
-      "id": "15023",
-      "name": "リリス(パラレル/SP/キャラ背景)",
-      "grade": "PCG10",
-      "rarity": "SP",
-      "set": "OP07-111[OP13]",
-      "price_jpy": 7980,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/15023",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260820105a.jpg"
-    },
-    {
       "id": "15046",
       "name": "バーソロミュー・くま(3周年ロゴ)",
       "grade": "PCG10",
@@ -2437,18 +2365,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/14995",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260820062a.jpg"
-    },
-    {
-      "id": "14953",
-      "name": "エドワード・ニューゲート(パラレル/漫画絵)",
-      "grade": "PCG10",
-      "rarity": "SR/P",
-      "set": "OP02-004",
-      "price_jpy": 4280,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/14953",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260820003a.jpg"
     },
     {
       "id": "14960",
@@ -3003,18 +2919,6 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260820009a.jpg"
     },
     {
-      "id": "14965",
-      "name": "ウタ(illust:Misa Matoki)",
-      "grade": "PCG10",
-      "rarity": "SEC",
-      "set": "OP02-120",
-      "price_jpy": 4580,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/14965",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260820019a.jpg"
-    },
-    {
       "id": "14977",
       "name": "ユースタス・キッド(パラレル/SP/illust:Studio Vigor Co.Ltd)",
       "grade": "PCG10",
@@ -3421,6 +3325,30 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/15206",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260911_4bd93f.jpg"
+    },
+    {
+      "id": "15397",
+      "name": "キャベンディッシュ(パラレル/SP/illust:Sunohara)",
+      "grade": "PSA10",
+      "rarity": "SP",
+      "set": "OP10-045[OP16]",
+      "price_jpy": 14800,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/15397",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260927_06d8e8.jpg"
+    },
+    {
+      "id": "15398",
+      "name": "2億V雷神(パラレル/illust:Ryuda)",
+      "grade": "PSA10",
+      "rarity": "R/P",
+      "set": "OP05-115",
+      "price_jpy": 7980,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/15398",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260927_1a8889.jpg"
     }
   ]
 }
