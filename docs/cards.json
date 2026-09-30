@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-09-29T06:32:51Z",
-  "total": 279,
+  "updated_at": "2026-09-30T06:16:08Z",
+  "total": 276,
   "cards": [
+    {
+      "id": "15411",
+      "name": "ボア・ハンコック(シリアル/ASIAロゴ有/illust:Ryuda)",
+      "grade": "PSA10",
+      "rarity": "R",
+      "set": "OP13-051",
+      "price_jpy": 848000,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/15411",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260929_8d9cf6.jpg"
+    },
     {
       "id": "15403",
       "name": "ドン!!カード(金枠/ロー)",
@@ -117,7 +129,7 @@
       "rarity": "SP",
       "set": "OP14-084[OP16]",
       "price_jpy": 69800,
-      "stock": 2,
+      "stock": 1,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/15234",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260829_2fa510.jpg"
@@ -129,34 +141,10 @@
       "rarity": "SR/P",
       "set": "OP16-098",
       "price_jpy": 14800,
-      "stock": 2,
+      "stock": 1,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/15214",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260911_85cef8.jpg"
-    },
-    {
-      "id": "15212",
-      "name": "モンキー・Ｄ・ルフィ(パラレル/illust:Bashikou)",
-      "grade": "PSA10",
-      "rarity": "SR/P",
-      "set": "OP16-015",
-      "price_jpy": 14800,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/15212",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260911_8f456e.jpg"
-    },
-    {
-      "id": "15182",
-      "name": "ポートガス・Ｄ・エース(パラレル/illust:otton)",
-      "grade": "PSA10",
-      "rarity": "L/P",
-      "set": "OP16-001",
-      "price_jpy": 17800,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/15182",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260909_3048d9.jpg"
     },
     {
       "id": "15159",
@@ -339,18 +327,6 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231204_a65f9c.jpg"
     },
     {
-      "id": "13866",
-      "name": "バーソロミュー・くま(3周年ロゴ)",
-      "grade": "PSA10",
-      "rarity": "SEC",
-      "set": "OP12-119",
-      "price_jpy": 9980,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/13866",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260702_9c6462.jpg"
-    },
-    {
       "id": "13863",
       "name": "ブルック(英語版/illust:Ono Tako)",
       "grade": "PSA10",
@@ -525,7 +501,7 @@
       "rarity": "SR/P",
       "set": "OP13-007",
       "price_jpy": 9980,
-      "stock": 12,
+      "stock": 11,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/12687",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260326_9cd063.jpg"
@@ -705,7 +681,7 @@
       "rarity": "SR",
       "set": "OP07-051",
       "price_jpy": 69800,
-      "stock": 2,
+      "stock": 1,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/8491",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20250614_94a41a.jpg"
@@ -999,16 +975,16 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240721_f7680b.jpg"
     },
     {
-      "id": "4687",
-      "name": "ナミ(パラレル/illust:POKImari)",
+      "id": "4773",
+      "name": "おナミ(漫画絵)",
       "grade": "PSA10",
-      "rarity": "SR/P",
-      "set": "OP08-106",
-      "price_jpy": 10800,
+      "rarity": "R",
+      "set": "OP06-101",
+      "price_jpy": 9980,
       "stock": 1,
       "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/4687",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240706_851cd2.jpg"
+      "url": "https://www.cardrush-op.jp/product/4773",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240716_60e430.jpg"
     },
     {
       "id": "4688",
@@ -2085,7 +2061,7 @@
       "rarity": "SP",
       "set": "OP09-118[OP13]",
       "price_jpy": 29800,
-      "stock": 3,
+      "stock": 2,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/11349",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260111_be1d0d.jpg"
@@ -2157,7 +2133,7 @@
       "rarity": "SEC",
       "set": "OP13-118",
       "price_jpy": 7980,
-      "stock": 2,
+      "stock": 1,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/14024",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260716_36d4bf.jpg"
@@ -2241,7 +2217,7 @@
       "rarity": "L/P",
       "set": "OP09-042",
       "price_jpy": 4980,
-      "stock": 2,
+      "stock": 1,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/14302",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260807_77f1a4.jpg"
@@ -2317,18 +2293,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/15057",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260820156a.jpg"
-    },
-    {
-      "id": "15059",
-      "name": "マーシャル・Ｄ・ティーチ(パラレル/illust:Akira EGAWA)",
-      "grade": "PCG10",
-      "rarity": "SEC/P",
-      "set": "OP16-119",
-      "price_jpy": 8980,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/15059",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260820159a.jpg"
     },
     {
       "id": "14959",
