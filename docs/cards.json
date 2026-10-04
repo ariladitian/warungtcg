@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-03T05:59:15Z",
-  "total": 253,
+  "updated_at": "2026-10-04T06:36:11Z",
+  "total": 250,
   "cards": [
+    {
+      "id": "15438",
+      "name": "モンキー・Ｄ・ルフィ(パラレル/手配書)",
+      "grade": "PSA9",
+      "rarity": "SP",
+      "set": "OP13-118",
+      "price_jpy": 16800,
+      "stock": 1,
+      "damaged": true,
+      "url": "https://www.cardrush-op.jp/product/15438",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260110_5740eb.jpg"
+    },
     {
       "id": "15411",
       "name": "ボア・ハンコック(シリアル/ASIAロゴ有/illust:Ryuda)",
@@ -37,18 +49,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/15386",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260923_c6eb38.jpg"
-    },
-    {
-      "id": "15370",
-      "name": "アーロン(パラレル/illust:Anderson)",
-      "grade": "PSA10",
-      "rarity": "L/P",
-      "set": "OP03-022",
-      "price_jpy": 9980,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/15370",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260921_be3939.jpg"
     },
     {
       "id": "15299",
@@ -313,6 +313,18 @@
       "damaged": true,
       "url": "https://www.cardrush-op.jp/product/13796",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231105_c1085a.jpg"
+    },
+    {
+      "id": "13253",
+      "name": "ペローナ(3周年ロゴ)",
+      "grade": "PSA10",
+      "rarity": "SR",
+      "set": "OP12-034",
+      "price_jpy": 12800,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/13253",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260526_c8b2b0.jpg"
     },
     {
       "id": "13224",
@@ -1059,18 +1071,6 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/K9240312043.jpg"
     },
     {
-      "id": "3689",
-      "name": "モンキー・D・ルフィ",
-      "grade": "PSA10",
-      "rarity": "P",
-      "set": "P-036",
-      "price_jpy": 9980,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/3689",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/K9240312009.jpg"
-    },
-    {
       "id": "3652",
       "name": "カイドウ(パラレル/illust:akagi)",
       "grade": "PSA10",
@@ -1371,18 +1371,6 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240404_e1d792.jpg"
     },
     {
-      "id": "2879",
-      "name": "コビー(illust:Anderson)",
-      "grade": "PSA10",
-      "rarity": "R",
-      "set": "OP02-098",
-      "price_jpy": 12800,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/2879",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240103_68fe3f.jpg"
-    },
-    {
       "id": "2766",
       "name": "ウソップ(CS/illust:phima)",
       "grade": "PSA10",
@@ -1551,18 +1539,6 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231202_e0695f.jpg"
     },
     {
-      "id": "2567",
-      "name": "トラファルガー・ロー(パラレル/漫画絵)",
-      "grade": "PSA10",
-      "rarity": "L/P",
-      "set": "OP01-002",
-      "price_jpy": 24800,
-      "stock": 3,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/2567",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231201_a53520.jpg"
-    },
-    {
       "id": "2559",
       "name": "クイーン(illust:Studio Vigor Co.Ltd)",
       "grade": "PSA10",
@@ -1657,18 +1633,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/2416",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231119_43cc72.jpg"
-    },
-    {
-      "id": "2258",
-      "name": "ウソップ(CS/illust:phima)",
-      "grade": "PSA10",
-      "rarity": "R",
-      "set": "OP01-004",
-      "price_jpy": 178000,
-      "stock": 4,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/2258",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231111_bd9591.jpg"
     },
     {
       "id": "2221",
