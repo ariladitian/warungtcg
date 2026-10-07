@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-06T07:08:18Z",
-  "total": 246,
+  "updated_at": "2026-10-07T06:48:55Z",
+  "total": 243,
   "cards": [
     {
       "id": "15411",
@@ -21,7 +21,7 @@
       "rarity": "L/P",
       "set": "OP16-041",
       "price_jpy": 8980,
-      "stock": 2,
+      "stock": 1,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/15394",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260926_984c6b.jpg"
@@ -313,18 +313,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/13027",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260426_df2523.jpg"
-    },
-    {
-      "id": "12956",
-      "name": "エドワード・ニューゲート(パラレル/SP/悪魔の実模様)",
-      "grade": "PSA10",
-      "rarity": "SP",
-      "set": "OP13-042[OP15]",
-      "price_jpy": 17800,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/12956",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260419_97b0fb.jpg"
     },
     {
       "id": "12952",
@@ -993,7 +981,7 @@
       "rarity": "SR/P",
       "set": "OP06-009",
       "price_jpy": 9980,
-      "stock": 3,
+      "stock": 1,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/3685",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/K9240312043.jpg"
@@ -1609,18 +1597,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/2217",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231105_a73cbe.jpg"
-    },
-    {
-      "id": "2212",
-      "name": "シャンクス(パラレル/漫画背景/漫画絵/左下ロゴ無)",
-      "grade": "PSA10",
-      "rarity": "SEC/SP",
-      "set": "OP01-120",
-      "price_jpy": 198000,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/2212",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231105_56ebe6.jpg"
     },
     {
       "id": "9919",
@@ -2557,18 +2533,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/14988",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260820053a.jpg"
-    },
-    {
-      "id": "15011",
-      "name": "ゾロ十郎(パラレル/SP/黒背景/illust:Hashimoto Q)",
-      "grade": "PCG10",
-      "rarity": "SP",
-      "set": "ST18-004[OP12]",
-      "price_jpy": 26780,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/15011",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260820086a.jpg"
     },
     {
       "id": "15039",
