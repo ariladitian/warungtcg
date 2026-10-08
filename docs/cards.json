@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T06:48:55Z",
+  "updated_at": "2026-10-08T06:58:06Z",
   "total": 243,
   "cards": [
     {
@@ -375,6 +375,18 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260308_f67a8f.jpg"
     },
     {
+      "id": "11575",
+      "name": "モンキー・D・ルフィ(ONE PIECE DAY/漫画絵)",
+      "grade": "PSA10",
+      "rarity": "P",
+      "set": "P-110",
+      "price_jpy": 24800,
+      "stock": 2,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/11575",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260120_40d9dd.jpg"
+    },
+    {
       "id": "11541",
       "name": "レベッカ(パラレル/illust:Hashimoto Q)",
       "grade": "PSA10",
@@ -385,18 +397,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/11541",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260203_5c9283.jpg"
-    },
-    {
-      "id": "11222",
-      "name": "バギー(パラレル/金背景)",
-      "grade": "PSA10",
-      "rarity": "SP",
-      "set": "OP09-051[OP14]",
-      "price_jpy": 278000,
-      "stock": 2,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/11222",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20251229_3bdc35.jpg"
     },
     {
       "id": "11068",
@@ -421,18 +421,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/10420",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20251102_08c7a2.jpg"
-    },
-    {
-      "id": "9776",
-      "name": "しらほし(パラレル/SP/タロット柄)",
-      "grade": "PSA10",
-      "rarity": "SP",
-      "set": "EB01-057[OP11]",
-      "price_jpy": 24800,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/9776",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20250908_9acd93.jpg"
     },
     {
       "id": "9318",
@@ -637,6 +625,30 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/6367",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20241120_0dcb2b.jpg"
+    },
+    {
+      "id": "6313",
+      "name": "バギー(パラレル/漫画背景/漫画絵)",
+      "grade": "PSA10",
+      "rarity": "R/SP",
+      "set": "OP09-051",
+      "price_jpy": 128000,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/6313",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20241112_ddc53b.jpg"
+    },
+    {
+      "id": "6315",
+      "name": "シャンクス(パラレル/漫画絵)",
+      "grade": "PSA10",
+      "rarity": "L/P",
+      "set": "OP09-001",
+      "price_jpy": 9980,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/6315",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20241112_57a49f.jpg"
     },
     {
       "id": "6275",
@@ -1537,18 +1549,6 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/2416",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231119_43cc72.jpg"
-    },
-    {
-      "id": "2228",
-      "name": "ポートガス・D・エース(パラレル/illust:Anderson)",
-      "grade": "PSA10",
-      "rarity": "L/P",
-      "set": "OP03-001",
-      "price_jpy": 11800,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/2228",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20231105_c1085a.jpg"
     },
     {
       "id": "2221",
