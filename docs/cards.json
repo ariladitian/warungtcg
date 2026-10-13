@@ -1,7 +1,19 @@
 {
-  "updated_at": "2026-10-12T06:54:21Z",
-  "total": 251,
+  "updated_at": "2026-10-13T07:19:26Z",
+  "total": 253,
   "cards": [
+    {
+      "id": "15550",
+      "name": "ボア・ハンコック(パラレル/illust:lack)",
+      "grade": "PSA10",
+      "rarity": "SR/P",
+      "set": "OP16-032",
+      "price_jpy": 12800,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/15550",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20261011_3366c1.jpg"
+    },
     {
       "id": "15544",
       "name": "モンキー・D・ルフィ(パラレル/SP/悪魔の実模様)",
@@ -135,18 +147,6 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260907_2999a9.jpg"
     },
     {
-      "id": "15076",
-      "name": "ルフィ＆エース",
-      "grade": "PSA10",
-      "rarity": "L",
-      "set": "ST30-001",
-      "price_jpy": 8980,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/15076",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260829_830714.jpg"
-    },
-    {
       "id": "14951",
       "name": "ユースタス・キッド(金文字)",
       "grade": "PSA10",
@@ -253,18 +253,6 @@
       "damaged": true,
       "url": "https://www.cardrush-op.jp/product/14205",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260730_c0c781.jpg"
-    },
-    {
-      "id": "14186",
-      "name": "トニートニー・チョッパー(驚き顔/漫画絵)",
-      "grade": "PSA10",
-      "rarity": "L",
-      "set": "OP08-001",
-      "price_jpy": 7480,
-      "stock": 1,
-      "damaged": false,
-      "url": "https://www.cardrush-op.jp/product/14186",
-      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260729_9bc679.jpg"
     },
     {
       "id": "14121",
@@ -493,6 +481,18 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/11533",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260203_f2838d.jpg"
+    },
+    {
+      "id": "11222",
+      "name": "バギー(パラレル/金背景)",
+      "grade": "PSA10",
+      "rarity": "SP",
+      "set": "OP09-051[OP14]",
+      "price_jpy": 318000,
+      "stock": 2,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/11222",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20251229_3bdc35.jpg"
     },
     {
       "id": "11019",
@@ -1353,7 +1353,7 @@
       "rarity": "SP",
       "set": "OP04-064[OP06]",
       "price_jpy": 22800,
-      "stock": 1,
+      "stock": 2,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/3113",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20240127_3a1fbc.jpg"
@@ -1521,7 +1521,7 @@
       "rarity": "R",
       "set": "OP01-005",
       "price_jpy": 12800,
-      "stock": 2,
+      "stock": 1,
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/2674",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/OPPSA1211_13.jpg"
@@ -1767,6 +1767,18 @@
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20250929_83276b.jpg"
     },
     {
+      "id": "10038",
+      "name": "イーザンバロン・V・ナス寿郎聖(パラレル/赤文字/illust:Gege Akutami)",
+      "grade": "PSA10",
+      "rarity": "R/P",
+      "set": "OP13-080",
+      "price_jpy": 39800,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/10038",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20251013_0e93fe.jpg"
+    },
+    {
       "id": "10160",
       "name": "ペローナ(パラレル/フルアート/illust:Misa Matoki)",
       "grade": "PSA10",
@@ -1813,6 +1825,18 @@
       "damaged": false,
       "url": "https://www.cardrush-op.jp/product/11349",
       "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260111_be1d0d.jpg"
+    },
+    {
+      "id": "12756",
+      "name": "スモーカー＆たしぎ(パラレル/illust:Bashikou)",
+      "grade": "PSA10",
+      "rarity": "SP",
+      "set": "EB04-003",
+      "price_jpy": 12800,
+      "stock": 1,
+      "damaged": false,
+      "url": "https://www.cardrush-op.jp/product/12756",
+      "image": "https://www.cardrush-op.jp/data/cardrush-op/product/20260401_c730d3.jpg"
     },
     {
       "id": "10422",
